@@ -220,3 +220,144 @@
 // }
 
 // console.log(arrBetween(3, 8, [1, 5, 95, 0, 4, 7]))
+
+// 16
+// Stuttering Function
+// Write a function that stutters a word as if someone is struggling to read it. The first two
+// letters are repeated twice with an ellipsis ... and space after each, and then the word is
+// pronounced with a question mark ?.
+
+// stutter("incredible") ➞ "in... in... incredible?"
+
+// stutter("enthusiastic") ➞ "en... en... enthusiastic?"
+
+// stutter("outstanding") ➞ "ou... ou... outstanding?"
+
+// function stutter(word) {
+// 	return `${word.substr(0,2)}... ${word.substr(0,2)}... ${word}?`
+// }
+
+// console.log(stutter("incredible"))
+
+// 17
+// hasSameBread(
+//     ["white bread", "lettuce", "white bread"],
+//     ["white bread", "tomato", "white bread"]
+//   ) ➞ true
+
+//   hasSameBread(
+//     ["brown bread", "chicken", "brown bread"],
+//     ["white bread", "chicken", "white bread"]
+//   ) ➞ false
+  
+//   hasSameBread(
+    // ["toast", "cheese", "toast"],
+    // ["brown bread", "cheese", "toast"]
+//   ) ➞ false
+
+// function hasSameBread(arr1, arr2) {
+// 	return arr1[0] === arr2[0] && arr1[2] === arr2[2]
+// }
+
+// console.log(hasSameBread(["toast", "cheese", "toast"], ["toast", "cheese", "toast"]))
+
+// 18
+// Fix the Error: Check Whether a Given Number Is Odd
+// function isOdd(num){
+//     ret n % 19 += 123;
+// }
+// function isOdd(num) {
+// 	return num % 2 !== 0
+// }
+
+//   isOdd(-5) ➞ true
+
+//   isOdd(25) ➞ true
+  
+//   isOdd(0) ➞ false
+
+//19
+// Luke, I Am Your ...
+// relationToLuke("Darth Vader") ➞ "Luke, I am your father."
+
+// relationToLuke("Leia") ➞ "Luke, I am your sister."
+
+// relationToLuke("Han") ➞ "Luke, I am your brother in law."
+
+// function relationToLuke(name) {
+// 	const people = {
+//         'Darth Vader': 'father',
+//         'Leia': 'sister',
+//         'Han': 'brother in law',
+//         'R2D2': 'droid'
+//     }
+//     return `Luke, I am your ${people[name]}.`
+// }
+
+// console.log(relationToLuke('Darth Vader'))
+
+//20
+// Number of Stickers
+// Given an n * n * n Rubik's cube, return the number of individual stickers that are needed to cover the whole cube.
+
+// howManyStickers(1) ➞ 6
+
+// howManyStickers(2) ➞ 24
+
+// howManyStickers(3) ➞ 54
+
+// function howManyStickers(n) {
+// 	return (n ** 2) * 6
+// }
+
+// console.log(howManyStickers(15))
+
+//21
+// Nth Star Number
+
+// Create a function that takes a positive integer and returns the nth "star number".
+
+// A star number is a centered figurate number a centered hexagram (six-pointed star), such as the one that Chinese checkers is played on.
+
+
+// starNumber(2) ➞ 13
+
+// starNumber(3) ➞ 37
+
+// starNumber(5) ➞ 121
+
+// function starNumber(n) {
+// 	return (6 * n) * (n - 1) + 1
+// }
+
+// console.log(starNumber(6))
+// // 6n(n − 1) + 1
+
+//22
+
+// Movie Theatre Admittance
+
+// acceptIntoMovie(14, true) ➞ true
+
+// acceptIntoMovie(14, false) ➞ false
+
+// acceptIntoMovie(16, false) ➞ true
+
+// function acceptIntoMovie(age, isSupervised) {
+// 	return age >= 15 || isSupervised
+// }
+
+// console.log(acceptIntoMovie(14, true))
+
+// 23
+// posCom(1) ➞ 2
+
+// posCom(3) ➞ 8
+
+// posCom(10) ➞ 1024
+
+// function posCom(num) {
+// 	return 2 ** num
+// }
+
+// console.log(posCom(10))
