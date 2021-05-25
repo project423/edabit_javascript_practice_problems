@@ -1057,7 +1057,269 @@
 
 // console.log(error(2))
 
+//63
+
+// Derivative of a Function
+
+// derivative(1, 4) ➞ 1
+
+// derivative(3, -2) ➞ 12
+
+// derivative(4, -3) ➞ -108
+
+// function derivative(b, m) {
+//     exponent = b - 1
+//     return b * m ** exponent
+// }
+
+// console.log(derivative(-2, 10))
+
+//64
+
+// Incorrect Import Statement
+
+// fixImport("import object from module_name") ➞ "from module_name import object"
+
+// fixImport("import randint from random") ➞ "from random import randint"
+
+// fixImport("import pi from math") ➞ "from math import pi"
+
+// function fixImport(s) {
+//   arr = s.split(" ");
+//   firstWord = arr[0];
+//   secondWord = arr[1];
+//   arr[0] = arr[2];
+//   arr[1] = arr[3];
+//   arr[2] = firstWord;
+//   arr[3] = secondWord
+//   return arr.join(" ");
+// }
+
+// console.log(fixImport("import pi from math"));
+
+// const fixImport = (s) => {
+// 	let [a,b,c,d]=s.split(' ')
+// 	return `${c} ${d} ${a} ${b}`
+// }
+
+//65
+
+// Slightly Superior
+
+// You will be given two extremely similar arrays, but exactly one of the items in an array will be valued slightly higher than its counterpart (which means that evaluating the value > the other value will return true).
+
+// Create a function that returns whether the first array is slightly superior to that of the second.
+
+// function isFirstSuperior(arr1, arr2) {
+// 	for(let i = 0; i < arr1.length; i++){
+//         if(arr1[i] > arr2[i]) return true
+//     }
+//     return false
+// }
+
+// function isFirstSuperior(arr1, arr2) {
+// 	return arr1 > arr2;
+// }
+
+// // isFirstSuperior(["a", "d", "c"], ["a", "b", "c"]) ➞ true
+
+// console.log(isFirstSuperior(["a", "d", "c"], ["a", "b", "c"]))
+// console.log(isFirstSuperior(["zebra", "ostrich", "whale"], ["ant", "ostrich", "whale"]))
+
+//66
+
+// Number Split
+
+// numberSplit(4) ➞ [2, 2]
+
+// numberSplit(10) ➞ [5, 5]
+
+// numberSplit(11) ➞ [5, 6]
+
+// numberSplit(-9) ➞ [-5, -4]
+
+// function numberSplit(n) {
+// 	if (n % 2 == 0) return [n/2, n/2]
+
+//     return [Math.floor(n/2), Math.ceil(n/2)]
+
+// }
+
+// console.log(numberSplit(5))
+
+//67
+// Tile Teamwork Tactics
+// In a board game, a piece may advance 1-6 tiles forward depending on the number rolled on a six-sided dice. If you advance your piece onto the same tile as another player's piece, both of you earn a bonus.
+
+// Given you and your friend's tile number, create a function that returns if it's possible to earn a bonus when you roll the dice.
+
+// possibleBonus(3, 7) ➞ true
+
+// possibleBonus(1, 9) ➞ false
+
+// possibleBonus(5, 3) ➞ false
+
+// function possibleBonus(a, b) {
+// 	if(a === b || a > b) return false;
+//     if( b - a <= 6){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+
+// function possibleBonus(a, b) {
+// 	return b - a <= 6 && b - a > 0
+// }
+
+// 68
+
+// sortByLength(["a", "ccc", "dddd", "bb"]) ➞ ["a", "bb", "ccc", "dddd"]
+
+// sortByLength(["apple", "pie", "shortcake"]) ➞ ["pie", "apple", "shortcake"]
+
+// sortByLength(["may", "april", "september", "august"]) ➞ ["may", "april", "august", "september"]
+
+// sortByLength([]) ➞ []
+
+// function sortByLength(arr) {
+//     return arr.sort((a,b)=> a.length - b.length)
+// }
+
+// // console.log(sortByLength(["a", "ccc", "dddd", "bb"]))
+
+// console.log(sortByLength(["apple", "pie", "shortcake"]))
+
+//69
+
+// Even All the Way
+
+// Given an array of numbers, return an array which contains all the even numbers in the orginal array, which also have even indices.
+
+// getOnlyEvens([1, 3, 2, 6, 4, 8]) ➞ [2, 4]
+
+// getOnlyEvens([0, 1, 2, 3, 4]) ➞ [0, 2, 4]
+
+// getOnlyEvens([1, 2, 3, 4, 5]) ➞ []
+
+// function getOnlyEvens(nums) {
+//   const evens = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     if (i % 2 === 0 && nums[i] % 2 === 0) {
+//       evens.push(nums[i]);
+//     }
+//   }
+//   return evens;
+// }
+// filter can take a second parameter which is the index
+// function getOnlyEvens(nums) {
+// 	return nums.filter((item,index) => !(item % 2) && !(index % 2))
+// }
+// console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]));
+// console.log(getOnlyEvens([47, 31, 24, 37, 29, 41, 31, 49, 4, 24]));
+// console.log(getOnlyEvens([0, 1, 2, 3, 4]));
 
 
+//70
+
+// Burglary Series (04): Add its Name
+
+// addName({}, "Brutus", 300) ➞ { Brutus: 300 }
+
+// addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
+
+// addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
+
+// function addName(obj, name, value) {
+// 	obj[name]=value
+//     return obj
+// }
+
+// function addName (obj, name, value) {
+// 	return {...obj, [name]: value}
+// };
+
+// console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440))
+
+//71
+// Emotify the Sentence
+
+// emotify("Make me smile") ➞ "Make me :D"
+
+// emotify("Make me grin") ➞ "Make me :)"
+
+// emotify("Make me sad") ➞ "Make me :("
+
+// function emotify(str) {
+// 	const expressions = {
+//         smile : ":D",
+//         grin : ":)",
+//         sad : ":(",
+//         mad : ":P"
+//     }
+    
+//     return `Make me ${expressions[str.split(" ")[2]]}`
+// }
+
+// console.log(emotify("Make me smile"))
+
+//72
+
+// repetition("ab", 3) ➞ "ababab"
+
+// repetition("kiwi", 1) ➞ "kiwi"
+
+// repetition("cherry", 2) ➞ "cherrycherry"
+
+// function repetition(txt, n) {
+//     let string = ""
+// 	if(!n){
+//         return string
+//     }
+//     return txt + repetition(txt, n - 1)
+// }
+
+// function repetition(txt, n) {
+// 	return n ? txt + repetition(txt, n - 1) : '';
+// }
+
+// console.log(repetition("cherry", 2))
+// console.log(repetition("ab", 3))
 
 
+//73
+// Find the Bomb
+// bomb("There is a bomb.") ➞ "Duck!!!"
+
+// bomb("Hey, did you think there is a bomb?") ➞ "Duck!!!"
+
+// bomb("This goes boom!!!") ➞ "There is no bomb, relax."
+
+// function bomb(str) {
+// 	if(str.match(/\b(bomb)\b/gi)){
+//         return "Duck!!!"
+//     }
+//     return "There is no bomb, relax."
+// }
+// console.log(bomb("This goes BoMb!!!"))
+
+//74
+
+// fruitSalad(["apple", "pear", "grapes"]) ➞ "apargrapepesple"
+
+// fruitSalad(["raspberries", "mango"]) ➞ "erriesmangoraspb"
+
+// fruitSalad(["banana"]) ➞ "anaban"
+
+// function fruitSalad(arr) {
+// 	firstChunks =  arr.map((fruit)=>{
+//         return fruit.slice(0, fruit.length/2)
+//     })
+//     lastChunks =  arr.map((fruit)=>{
+//         return fruit.slice(fruit.length/2)
+//     })
+    
+//     return [...firstChunks, ...lastChunks].sort().join('')
+// }
+
+// console.log(fruitSalad(["apple", "pear", "grapes"]))
