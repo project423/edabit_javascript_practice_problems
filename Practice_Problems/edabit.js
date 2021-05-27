@@ -1219,7 +1219,6 @@
 // console.log(getOnlyEvens([47, 31, 24, 37, 29, 41, 31, 49, 4, 24]));
 // console.log(getOnlyEvens([0, 1, 2, 3, 4]));
 
-
 //70
 
 // Burglary Series (04): Add its Name
@@ -1257,7 +1256,7 @@
 //         sad : ":(",
 //         mad : ":P"
 //     }
-    
+
 //     return `Make me ${expressions[str.split(" ")[2]]}`
 // }
 
@@ -1285,7 +1284,6 @@
 
 // console.log(repetition("cherry", 2))
 // console.log(repetition("ab", 3))
-
 
 //73
 // Find the Bomb
@@ -1318,8 +1316,121 @@
 //     lastChunks =  arr.map((fruit)=>{
 //         return fruit.slice(fruit.length/2)
 //     })
-    
+
 //     return [...firstChunks, ...lastChunks].sort().join('')
 // }
 
 // console.log(fruitSalad(["apple", "pear", "grapes"]))
+
+//75
+
+// Highest Digit
+
+// Create a function that takes a number as an argument and returns the highest digit in that number.
+
+// highestDigit(379) ➞ 9
+
+// highestDigit(2) ➞ 2
+
+// highestDigit(377401) ➞ 7
+
+// function highestDigit(number) {
+//   const numbers = [];
+//   if (number === 0) return 0;
+
+//   while (number) {
+//     numbers.push(number % 10);
+//     number = Math.floor(number / 10);
+//   }
+//   return Math.max(...numbers);
+// }
+
+// console.log(highestDigit(10));
+
+// 76
+
+// Cycling Through Strings
+
+// stringCycling("abc", "hello") ➞ "abcab"
+
+// stringCycling("programming", "edabit") ➞ "progra"
+
+// stringCycling("the world in me evolves in hers", "i love Tesh, so much so") ➞ "the world in me evolves"
+
+// stringCycling("a thing of beauty is a joy forever", "indulge me surely") ➞ "a thing of beauty"
+
+// stringCycling("to", "hide") ➞ "toto"
+
+// stringCycling("such a feeling coming over me", "top of the world") ➞ "such a feeling c"
+
+
+// function stringCycling(a, b) {
+//     return b.length > a.length ? a.padEnd(b.length, a) : a.slice(0,b.length)    	
+// }
+
+// // const stringCycling = (a, b) => "".padEnd(b.length, a);
+
+// console.log(stringCycling("abc", "hello"))
+// console.log(stringCycling("programming", "edabit"))
+
+
+// 77
+
+// Array Operation
+
+// arrayOperation(1, 10, 3) ➞ [3, 6, 9]
+
+// arrayOperation(7, 9, 2) ➞ [8]
+
+// arrayOperation(15, 20, 7) ➞ []
+
+// function arrayOperation(x, y, n) {
+//     const nums = []
+// 	for(let i = x; i <= y; i++){
+//         if(i % n === 0){            
+//             nums.push(i)
+//         }
+//     }
+//     return nums    
+// }
+
+// console.log(arrayOperation(1, 10, 3))
+// console.log(arrayOperation(10, 50, 10))
+
+//78
+
+// const names = ["Dennis", "Vera", "Mabel", "Annette", "Sussan"]
+// const jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
+
+// assignPersonToJob(names, jobs) ➞ {
+//   Dennis: "Butcher",
+//   Vera: "Programmer",
+//   Mabel: "Doctor",
+//   Annette: "Teacher",
+//   Sussan: "Lecturer"
+// }
+
+// const names = ["Dennis", "Vera", "Mabel", "Annette", "Sussan"]
+// const jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
+
+// function assignPersonToJob(names, jobs) {
+//     const result = {};
+// 	names.forEach((key, i)=> result[key] = jobs[i])    
+// }
+
+// console.log(assignPersonToJob(names, jobs))
+
+// 79
+
+// function makePlusFunction(num){
+//     return function (x){
+//         return x + num;
+//     }
+// }
+
+// const plusTwo = makePlusFunction(2)
+// const plusFive = makePlusFunction(5)
+// const plusSeven = makePlusFunction(plusTwo(plusFive(0)))
+// const plusTen = makePlusFunction(10)
+
+
